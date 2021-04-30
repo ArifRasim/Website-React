@@ -20,7 +20,7 @@ video {
   
   .hero-container > h1 {
     color: #fff;
-    font-size: 100px;
+    font-size: 50px;
     margin-top: -100px;
   }
   
@@ -69,4 +69,36 @@ video {
     .btn {
       width: 100%;
     }
+  }
+  .next{
+    position:absolute;
+    top:50%;
+    right: 32px;
+    font-size: 3rem;
+    color: #fff;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+
+  }
+  .previous{
+    position:absolute;
+    top:50%;
+    left: 32px;
+    font-size: 3rem;
+    color: #fff;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+
+  }
+  .down{
+    position:absolute;
+    top:90%;
+    font-size: 3rem;
+    color: #fff;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+
   }

@@ -1,6 +1,7 @@
 .cards {
     padding: 4rem;
-    background: #fff;
+    background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
+
   }
   
   h1 {
@@ -94,7 +95,7 @@
   }
   
   .cards__item__text {
-    color: #252e48;
+    color: #fff;
     font-size: 18px;
     line-height: 24px;
   }

@@ -27,34 +27,33 @@ function Navbar() {
         <nav className="navbar">
         <div className="navbar-container">
         <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-            A.R. <i className='fab fa-typo3'/>
+        <i class="fas fa-globe"></i>    Seasons 
         </Link>
         <div className="menu-icon" onClick={handleClick}>
             <i className={click ? 'fas fa-times' : 'fas fa-bars'}/>
         </div>
             <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className="nav-item">
-                <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-                Home
+                <Link to='/spring' className='nav-links' onClick={closeMobileMenu}>
+                Spring
                 </Link>
             </li>
             <li className="nav-item">
-                <Link to='/services' className='nav-links' onClick={closeMobileMenu}>
-                Services
+                <Link to='/summer' className='nav-links' onClick={closeMobileMenu}>
+                Summer
                 </Link>
             </li>
             <li className="nav-item">
-                <Link to='/products' className='nav-links' onClick={closeMobileMenu}>
-                Products
+                <Link to='/autumn' className='nav-links' onClick={closeMobileMenu}>
+                Autumn
                 </Link>
             </li>
             <li className="nav-item">
-                <Link to='/sign-up' className='nav-links-mobile' onClick={closeMobileMenu}>
-                Sign Up
+                <Link to='/winter' className='nav-links' onClick={closeMobileMenu}>
+                Winter
                 </Link>
             </li>
             </ul>
-            {button&& <Button buttonStyle="btn--outline">SIGN UP</Button>}
         </div>
         </nav>
         </>

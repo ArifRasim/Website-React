@@ -1,25 +1,100 @@
 import React from 'react'
 import './Button.css'
 import {Link} from 'react-router-dom'
-const STYLES=['btn--primary','btn--outline']
-const SIZES=['btn--medium','btn--large']
+import {Link as Scroll} from "react-scroll"
+
+
+
 
 export const Button=({
-    children,
-    type,
     onClick,
-    buttonStyle,
-    buttonSize
+    className
 })=>{
-    const  checkButtonStyle=STYLES.includes(buttonStyle) ? buttonStyle : STYLES[0]
+    
+    function nextVideo(){
 
-    const checkButtonSizes=SIZES.includes(buttonSize)? buttonSize : SIZES[0]
+        if (document.getElementById("background").src=="http://localhost:3000/videos/spring.mp4") {
+            
+            return document.getElementById("background").src="./videos/summer.mp4"
+            
+        }
+        if (document.getElementById("background").src=="http://localhost:3000/videos/summer.mp4") {
+            
+            return document.getElementById("background").src="./videos/autumn.mp4"
+            
+        }
+        if (document.getElementById("background").src=="http://localhost:3000/videos/autumn.mp4") {
+            
+            return document.getElementById("background").src="./videos/winter.mp4"
+            
+        }
+        if (document.getElementById("background").src=="http://localhost:3000/videos/winter.mp4") {
+            
+            return document.getElementById("background").src="./videos/spring.mp4"
+            
+        }
+    }
 
-    return (
-        <Link to='/sign-up' className="btn-mobile">
-        <button className={`btn ${checkButtonStyle} ${checkButtonSizes}` }  onClick={onClick} type={type}>
-        {children}
+    function previousVideo(){
+
+        if (document.getElementById("background").src=="http://localhost:3000/videos/spring.mp4") {
+            
+            return document.getElementById("background").src="./videos/winter.mp4"
+            
+        }
+        if (document.getElementById("background").src=="http://localhost:3000/videos/summer.mp4") {
+            
+            return document.getElementById("background").src="./videos/spring.mp4"
+            
+        }
+        if (document.getElementById("background").src=="http://localhost:3000/videos/autumn.mp4") {
+            
+            return document.getElementById("background").src="./videos/summer.mp4"
+            
+        }
+        if (document.getElementById("background").src=="http://localhost:3000/videos/winter.mp4") {
+            
+            return document.getElementById("background").src="./videos/autumn.mp4"
+            
+        }
+    }
+    
+    if (className=="next") {
+
+        
+        return (
+
+            <faArrowAltCircleRight   onClick={nextVideo}>
+            </faArrowAltCircleRight>
+        )
+    }
+
+    if (className=="previous") {
+        
+        return (
+
+            <faArrowAltCircleLeft   onClick={previousVideo}>
+            </faArrowAltCircleLeft>
+        )
+    }
+    if (className=="ca3-scroll-down-link ca3-scroll-down-arrow") {
+        
+        return (
+
+            <Scroll className="btn-mobile" to='cards'>
+            <button className="ca3-scroll-down-link ca3-scroll-down-arrow" data-ca3_iconfont="ETmodules" data-ca3_icon="">
+            </button>
+            </Scroll>
+        )
+    }
+    else{
+        return (
+        
+        <Scroll className="btn-mobile" to="cards">
+        <button className="ca3-scroll-down-link ca3-scroll-down-arrow" data-ca3_iconfont="ETmodules" data-ca3_icon=""  >
         </button>
-        </Link>
-    )
+        </Scroll>
+    )}
+    
+
 }

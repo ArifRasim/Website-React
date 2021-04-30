@@ -3,9 +3,10 @@ import React from 'react'
 import Navbar from './components/Navbar'
 import {BrowserRouter as Router,Switch,Route} from 'react-router-dom'
 import Home from './components/pages/Home'
-import Services from './components/pages/Services';
-import Products from './components/pages/Products';
-import SignUp from './components/pages/SignUp';
+import Spring from './components/pages/Spring';
+import Summer from './components/pages/Summer';
+import Autumn from './components/pages/Autumn';
+import Winter from './components/pages/winter';
 
 function App() {
   return (
@@ -13,13 +14,16 @@ function App() {
     <Navbar/>
     <Switch>
     <Route path='/' exact component={Home} />
-    <Route path='/services' component={Services} />
-    <Route path='/products' component={Products} />
-    <Route path='/sign-up' component={SignUp} />
+    <Route path='/spring' component={Spring} />
+    <Route path='/summer' component={Summer} />
+    <Route path='/autumn' component={Autumn} />
+    <Route path='/winter' component={Winter} />
 
     </Switch>
     </Router>
+    
   );
+
 }
 
 export default App;

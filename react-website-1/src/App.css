@@ -6,9 +6,10 @@
 }
 
 .home,
-.services,
-.products,
-.sign-up {
+.spring,
+.summer,
+.autumn,
+.winter {
   display: flex;
   height: 90vh;
   align-items: center;
@@ -16,29 +17,30 @@
   font-size: 3rem;
 }
 
-.services {
-  background-image: url('./images/img-2.jpg');
+.spring {
+  background-image: url('./images/spring-img.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px;
 }
 
-.products {
-  background-image: url('./images/img-1.jpg');
-  background-position: center;
-  background-size: fill;
-  background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px;
-}
-
-.sign-up {
-  background-image: url('./images/img-8.jpg');
+.summer {
+  background-image: url('./images/summer-img.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px;
+}
+
+.autumn {
+  background-image: url('./images/autumn-img.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.winter {
+  background-image: url('./images/winter-img.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
